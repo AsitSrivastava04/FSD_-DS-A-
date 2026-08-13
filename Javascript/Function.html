@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in HTML</title>
+</head>
+<body>
+    <script>
+        function abes(){
+            document.write("<br>Hi we are coder!");
+        }
+
+        abes();
+        abes();
+        abes();
+
+
+        function addition(a,b){
+            document.write("<br>Sum of two numbers is = " + (a+b));
+            return a+b;
+        }
+        let sum = addition(10,20);
+        
+        sum = addition(101,200);
+        
+
+        const multiply = function(a,b){
+            document.write("<br>Multiplication of two numbers is = " + (a*b));
+            return a*b;
+        }
+        </script>
+</body>
+</html>
