@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number Trial</title>
+</head>
+<body>
+    <script>
+        function extractDigits(number) {
+            const digit = number % 10;
+            return digit;
+        }
+
+        function countDigits(number) {
+            if (number === 0) return 1;
+            let count = 0;
+            let temp =number;
+            while (temp > 0) {
+                count++;
+                temp = temp / 10;
+            }
+            return count;
+        }
+
+        function isArmstrong(num) {
+            let temp = num;
+            let sum = 0;
+            let power = countDigits(num);
+            
+            while (temp > 0) {
+                let digit = temp % 10;
+                sum += Math.pow(digit, power);
+                temp =temp / 10;
+            }
+            return sum === num;
+      }
+
+           let z = prompt("Enter a number to check if it is an Armstrong number:");
+           z = parseInt(z);
+           if (isArmstrong(z)) {
+            
+               alert(z + " is an Armstrong number.");
+           } else {
+               alert(z + " is not an Armstrong number.");
+           }
+    </script>
+</body>
+</html>
