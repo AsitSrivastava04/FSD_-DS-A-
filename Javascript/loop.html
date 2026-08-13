@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loops in JS</title>
 </head>
-
 <body>
+
+    <p id="demo"></p>
+
     <script>
-        //CODE FOR FOR LOOP
-        for (let i = 1; i <= 10; i++) {
-            document.write("<br> Abes College");
-        }
+        // 1. Correctly defined array with 4 separate elements
+        const arr = ["VOLVO", "BMW", "AUDI", "MERCEDES"];
+        let text = "";
 
-        const arr = [1, 2, 3, 4, 5];
-
-        for (element of arr) {
-            console.log(element);
+        // 2. Loop through all elements using for...of
+        for (let element of arr) {
+            text += element + "<br>";
         }
+        
+        // 3. Update the DOM once
+        document.getElementById("demo").innerHTML = text;
+        console.log("All elements:", text);
+
+        // 4. Loop through even indexes (0 and 2 -> VOLVO and AUDI)
+        let sample = "";
+        for (let i = 0; i < arr.length; i++) {
+            if (i % 2 === 0) {
+                sample += arr[i] + "<br>";
+            }
+        }
+        
+        // 5. Append or log the even index results
+        console.log("Even indexes:", sample);
     </script>
 </body>
-
 </html>
