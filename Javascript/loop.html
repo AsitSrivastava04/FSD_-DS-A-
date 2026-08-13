@@ -10,29 +10,54 @@
     <p id="demo"></p>
 
     <script>
-        // 1. Correctly defined array with 4 separate elements
-        const arr = ["VOLVO", "BMW", "AUDI", "MERCEDES"];
+        // // 1. Correctly defined array with 4 separate elements
+        // const arr = ["VOLVO", "BMW", "AUDI", "MERCEDES"];
+        // let text = "";
+
+        // // 2. Loop through all elements using for...of
+        // for (let element of arr) {
+        //     text += element + "<br>";
+        // }
+        
+        // // 3. Update the DOM once
+        // document.getElementById("demo").innerHTML = text;
+        // console.log("All elements:", text);
+
+        // // 4. Loop through even indexes (0 and 2 -> VOLVO and AUDI)
+        // let sample = "";
+        // for (let i = 0; i < arr.length; i++) {
+        //     if (i % 2 === 0) {
+        //         sample += arr[i] + "<br>";
+        //     }
+        // }
+        
+        // // 5. Append or log the even index results
+        // console.log("Even indexes:", sample);
+
+
+        // document.getElementById("demo").innerHTML = text;
+
+        // While loop example
+        // let i = 0;
         let text = "";
+        // while (i < 5) {
+        //     text += "The number is " + i + "<br>";
+        //     i++;
+        // }
+        // document.getElementById("demo").innerHTML = text;
 
-        // 2. Loop through all elements using for...of
-        for (let element of arr) {
-            text += element + "<br>";
-        }
+        // Below is a table example using while loop
+        let z = prompt("Enter a number to display its multiplication table:");
+        z = parseInt(z);
         
-        // 3. Update the DOM once
+        
+        i=1;
+        while (i < 10) {
+            text += z + "*" + i + " is " + (z * i) + "<br>";
+            i++;
+        }
         document.getElementById("demo").innerHTML = text;
-        console.log("All elements:", text);
 
-        // 4. Loop through even indexes (0 and 2 -> VOLVO and AUDI)
-        let sample = "";
-        for (let i = 0; i < arr.length; i++) {
-            if (i % 2 === 0) {
-                sample += arr[i] + "<br>";
-            }
-        }
-        
-        // 5. Append or log the even index results
-        console.log("Even indexes:", sample);
     </script>
 </body>
 </html>
