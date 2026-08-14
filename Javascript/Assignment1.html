@@ -14,17 +14,15 @@
             background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBWcfV_kWlb27h8ByGi9uWnB7z3-rrDEQRmH7BkTGrg&s=10');
             background-repeat: no-repeat;
             background-size: cover;
+            border-radius: 10px; 
         }
 
         ul {
-
-
             display: flex;
             margin: 20px;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* border: 2px solid black; */
             padding: 20px;
             font-weight: bold;
         }
@@ -43,6 +41,7 @@
             color: white;
             border: none;
             cursor: pointer;
+            border-radius: 5px; 
         }
 
         .orderButton:hover {
@@ -51,8 +50,11 @@
 
         .totalAmount {
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
             margin-top: 20px;
+            display: none;
         }
     </style>
 </head>
@@ -73,13 +75,10 @@
 
         <button class="orderButton" onclick="showTotal()">Order Now</button>
 
-        <p id="totalAmount"></p>
+        <p id="totalAmount" class="totalAmount"></p>
     </div>
 
-         
-
     <script>
-
         const products = {
             Tea: { 
                 price: 450, 
@@ -99,31 +98,33 @@
             }
         };
 
-
-
         function showTotal() {
             let z = prompt("Enter the product name :");
             if (z === null) return; 
             let productName = z.trim();
+            
+            productName = productName.charAt(0).toUpperCase() + productName.slice(1).toLowerCase();
 
             let q = prompt("Enter the quantity of product :");
             if (q === null) return; 
             let quantity = Number(q.trim());
 
-            if (products[productName] !== undefined) {
-                
+            if (products[productName] !== undefined && quantity > 0) {
                 let totalPrice = products[productName].price * quantity;
                 let productImage = products[productName].img;
-
                 
-                document.getElementById("totalAmount").innerHTML = 
+                let resultBox = document.getElementById("totalAmount");
+                
+                resultBox.innerHTML = 
                     "Total Amount: ₹" + totalPrice + "<br><br>" + 
                     "<img src='" + productImage + "' alt='" + productName + "' style='width: 150px; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);'>";
+                
+                resultBox.style.display = "block";
+
             } else {
-                alert("Product not found. Please enter a valid product name.");
+                alert("Product not found or invalid quantity. Please try again.");
             }
         }
-
     </script>
 </body>
 
