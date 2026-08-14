@@ -1,13 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini-Project</title>
+    <style>
+        .menu {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvBWcfV_kWlb27h8ByGi9uWnB7z3-rrDEQRmH7BkTGrg&s=10');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        ul {
+
+
+            display: flex;
+            margin: 20px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid black; */
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        li {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .orderButton {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .orderButton:hover {
+            background-color: #45a049;
+        }
+
+        .totalAmount {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
+
 <body>
+
+    <center>
+        <h2 style="color: blue;">Menu</h2>
+    </center>
+
+    <div class="menu">
+        <ul type="none">
+            <li>Tea: ₹450</li>
+            <li>Coffee: ₹500</li>
+            <li>Sugar: ₹700</li>
+            <li>Plates: ₹100</li>
+        </ul>
+
+        <button class="orderButton" onclick="showTotal()">Order Now</button>
+
+        <p id="totalAmount"></p>
+    </div>
+
+         
+
     <script>
-        
+
+        const products = {
+            Tea: { 
+                price: 450, 
+                img:  "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=200&h=200&fit=crop" 
+            },
+            Coffee: { 
+                price: 500, 
+                img: "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=200&h=200&fit=crop"
+            },
+            Sugar: { 
+                price: 700, 
+                img:  "https://images.unsplash.com/photo-1581451525062-0941f6eefc4a?w=200&h=200&fit=crop" 
+            },
+            Plates: { 
+                price: 100, 
+                img: "https://images.unsplash.com/photo-1617192809187-511d7bb85df7?w=200&h=200&fit=crop"
+            }
+        };
+
+
+
+        function showTotal() {
+            let z = prompt("Enter the product name :");
+            if (z === null) return; 
+            let productName = z.trim();
+
+            let q = prompt("Enter the quantity of product :");
+            if (q === null) return; 
+            let quantity = Number(q.trim());
+
+            if (products[productName] !== undefined) {
+                
+                let totalPrice = products[productName].price * quantity;
+                let productImage = products[productName].img;
+
+                
+                document.getElementById("totalAmount").innerHTML = 
+                    "Total Amount: ₹" + totalPrice + "<br><br>" + 
+                    "<img src='" + productImage + "' alt='" + productName + "' style='width: 150px; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);'>";
+            } else {
+                alert("Product not found. Please enter a valid product name.");
+            }
+        }
+
     </script>
 </body>
+
 </html>
