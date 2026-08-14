@@ -25,10 +25,33 @@
         sum = addition(101,200);
         
 
-        const multiply = function(a,b){
-            document.write("<br>Multiplication of two numbers is = " + (a*b));
+        const multiply = (a,b) => {
             return a*b;
+        };
+
+        let product = multiply(10,20);
+        document.write("<br>Product is = " + product);
+        
+        let z = prompt("Enter a product name to store it as a product")
+        let y = prompt("Enter the price for"+z+"product");
+        let product1 = [z,y]
+       
+       
+       
+       
+        let cardisplay = () => {
+              document.write("<br>Product is = " + product1[0] + " Price is = " + product1[1]);
+       }
+        let helicopterdisplay = () => {
+
         }
+        let aeroplanedisplay = () => {
+
+        }
+        
+        
+        
+        
         </script>
 </body>
 </html>

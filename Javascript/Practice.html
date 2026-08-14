@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight JavaScript</title>
+</head>
+<body>
+
+    <h2>Flight Booking Example</h2>
+    
+    <p id="output"></p>
+
+    <script>
+        let flightDetails = ["Sky Airlines", "Delhi to Mumbai", 5000];
+        let seatPrice = flightDetails[2];
+
+        let userInput = prompt("Number of tickets needed?" + "\n" + "Price per seat = " + seatPrice);
+        let numberOfTickets = Number(userInput);
+
+        let totalFare = numberOfTickets * seatPrice;
+
+        document.getElementById("output").innerHTML = 
+            "<b>Airline:</b> " + flightDetails[0] + "<br>" +
+            "<b>Route:</b> " + flightDetails[1] + "<br>" +
+            "<b>Tickets booked:</b> " + numberOfTickets + "<br><br>" +
+            "<b>Total Fare: ₹" + totalFare + "</b>";
+            
+    </script>
+
+</body>
+</html>
