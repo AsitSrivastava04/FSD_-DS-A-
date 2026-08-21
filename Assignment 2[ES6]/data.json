@@ -1,0 +1,44 @@
+{
+  "students": [
+    {
+      "id": "006",
+      "name": "Atharv Sharma",
+      "age": 19,
+      "grade": "10th",
+      "subjects": ["Mathematics", "Physics", "Chemistry"],
+      "isEnrolled": true
+    },
+    {
+      "id": "007",
+      "name": "Asit Srivastava",
+      "age": 20,
+      "grade": "Gandhi",
+      "subjects": ["Biology", "English", "History"],
+      "isEnrolled": true
+    },
+    {
+      "id": "007",
+      "name": "Armaan Anas",
+      "age": 26,
+      "grade": "B.Tech",
+      "subjects": ["Biology", "English", "History"],
+      "isEnrolled": true
+    },
+    {
+      "id": "007",
+      "name": "Asit Srivastava",
+      "age": 22,
+      "grade": "M.Tech",
+      "subjects": ["Biology", "English", "History"],
+      "isEnrolled": true
+    },
+    {
+      "id": "007",
+      "name": "Aman Kumar",
+      "age": 21,
+      "grade": "M.Tech",
+      "subjects": ["Biology", "English", "History"],
+      "isEnrolled": true
+    }
+  ]
+}

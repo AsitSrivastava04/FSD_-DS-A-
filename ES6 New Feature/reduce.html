@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is the example of the new feature filter</title>
+</head>
+<body>
+    <script>
+        const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const evenNumbers = num.filter(n => n % 2 ==0);
+        console.log("Original Numbers:", num);
+        console.log("Even Numbers:", evenNumbers); 
+
+        const square = evenNumbers.map(n => n * n);
+        const sum = square.reduce((i,s) => (i+s));
+        console.log("Sum of Square of Even Numbers:", sum);
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Operations</title>
+</head>
+
+<body>
+
+    <h2>
+    </h2>
+    <script>
+       
+       const studentsDatabase = [
+  {
+    id: "006",
+    name: "Atharv Sharma",
+    age: 19,
+    grade: "10th",
+    subjects: ["Mathematics", "Physics", "Chemistry"],
+    isEnrolled: true
+  },
+  {
+    id: "007",
+    name: "Gandhi Anas",
+    age: 20,
+    grade: "B.Tech",
+    subjects: ["Biology", "English", "History"],
+    isEnrolled: true
+  },
+  {
+    id: "007",
+    name: "Armaan Anas",
+    age: 26,
+    grade: "B.Tech",
+    subjects: ["Biology", "English", "History"],
+    isEnrolled: true
+  },
+  {
+    id: "007",
+    name: "Asit Srivastava",
+    age: 22,
+    grade: "M.Tech",
+    subjects: ["Biology", "English", "History"],
+    isEnrolled: true
+  },
+  {
+    id: "007",
+    name: "Aman Kumar",
+    age: 21,
+    grade: "M.Tech",
+    subjects: ["Biology", "English", "History"],
+    isEnrolled: true
+  }
+];
+
+//  Now take user input through prompt to check for a student by name and display their details if found.
+
+
+const studentName = prompt("Enter the name of the student to search:");
+const foundStudent = studentsDatabase.find(student => student.name === studentName);
+
+if (foundStudent) {
+    console.log("Student found:");
+    console.log(foundStudent);
+    document.write("<h3>Student Details:</h3>");
+    document.write("<p><strong>Name:</strong> " + foundStudent.name + "</p>");
+    document.write("<p><strong>Age:</strong> " + foundStudent.age + "</p>");
+    document.write("<p><strong>Grade:</strong> " + foundStudent.grade + "</p>");
+    document.write("<p><strong>Subjects:</strong> " + foundStudent.subjects.join(", ") + "</p>");
+    document.write("<p><strong>Enrollment Status:</strong> " + (foundStudent.isEnrolled ? "Enrolled" : "Not Enrolled") + "</p>");
+} else {
+    console.log("Student not found.");
+}
+    </script>
+</body>
+
+</html>

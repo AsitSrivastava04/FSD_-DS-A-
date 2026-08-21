@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        const student = {
+            name: "John",
+            age: 20,
+            rollno : 57
+        };
+
+        document.write(student.name);
+        document.write(student.age);
+        document.write(student.rollno);
+
+
+        //Destructuring
+
+        const {name, branch, rollno} = student;
+
+        console.log(name);
+        console.log(branch);
+        console.log(rollno);
+    </script>
+</body>
+</html>
