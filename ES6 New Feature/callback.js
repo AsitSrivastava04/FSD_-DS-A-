@@ -1,4 +1,4 @@
-function sum(a, b,) {
+function sum(a, b) {
     let result = a+b;
     return result;
 }
@@ -10,4 +10,6 @@ function sumWithMsg(clbk, msg){
 }
 
 sumWithMsg(sum, "MR. Deepak");
+
+
 
