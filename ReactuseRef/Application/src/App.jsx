@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div>
       <form action="">
-        <input type="text" placeholder='Enter your name' value={formData.name} onChange={handleChange })/>
+        <input type="text" placeholder='Enter your name' value={formData.name} onChange={handleChange }/>
         <br/>
         <input type="email" placeholder='Enter your email' value={formData.email} onChange={handleChange } />
         <br />
